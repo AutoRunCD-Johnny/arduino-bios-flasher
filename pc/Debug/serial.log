@@ -1,0 +1,3 @@
+﻿  main.cpp
+c:\users\autor\desktop\bios_flasher\pc\main.cpp(11): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(90): note: 参见“strcat”的声明
