@@ -84,13 +84,16 @@ void loop() {
   Serial.println("0 for flashing,1 for read binary data from bios,");
   state=Serial.read();
   switch (state){
-    case 0:
+    case (char)'0':
       BIOS_flash(2048*1024,0x200000,ROM);
       break;
-    case 1:
+    case (char)'1':
       for(i=0;i<2048;i++){
         BIOS_RD(i*1024,1024,readbuf);
         Serial.println((char*)readbuf);
+        while(Serial.read()!=(char)'A'){
+          delayMicroseconds(1000);
+        }
       }
       break;
   }
